@@ -1,5 +1,5 @@
 PhonePe Transaction Insights: Data Engineering & Predictive Analytics
-PythonStreamlitMachine LearningLicense
+
 
 📊 Project Overview
 This project is an end-to-end Data Science and Business Intelligence solution designed to analyze the PhonePe Pulse GitHub data. It transforms raw, nested JSON data into a structured SQL database, performs rigorous data wrangling, and applies advanced Machine Learning techniques to decode transaction dynamics, user engagement, and insurance penetration across India.
