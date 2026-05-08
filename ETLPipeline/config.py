@@ -9,7 +9,7 @@ import streamlit as st
 import urllib.parse
 
 # Connecting Database and create the Database
-DATA_ROOT = 'F:/Project/Labmantix/phone pe/pulse/data'
+DATA_ROOT = 'https://github.com/PhonePe/pulse'
 secrets_path ="F:/Project/Labmantix/phone pe/streamlit/.streamlit/secrets.toml"
 engine = None
 DB_CONNECTION_STRING = None
