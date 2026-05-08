@@ -10,19 +10,16 @@ import urllib.parse
 
 # Connecting Database and create the Database
 DATA_ROOT = 'https://github.com/PhonePe/pulse/tree/master/data'
-secrets_path ="F:/Project/Labmantix/phone pe/streamlit/.streamlit/secrets.toml"
+#secrets_path ="F:/Project/Labmantix/phone pe/streamlit/.streamlit/secrets.toml"
 engine = None
 DB_CONNECTION_STRING = None
 
 try:
     # st.secrets does not have a 'load_file' method and is only populated during 'streamlit run'.
     # We load the TOML file manually to support standalone execution (python config.py).
-    if os.path.exists(secrets_path):
-        with open(secrets_path, "r") as f:
-            secrets = toml.load(f)
-        raw_url = secrets.get('database', {}).get('url')
-    else:
-        raw_url = st.secrets.get('database', {}).get('url')
+        
+    raw_url = st.secrets['database']["url"]
+    
         
     if raw_url:
         # FIX 1: Replace 'postgres://' with 'postgresql://' for SQLAlchemy compatibility
