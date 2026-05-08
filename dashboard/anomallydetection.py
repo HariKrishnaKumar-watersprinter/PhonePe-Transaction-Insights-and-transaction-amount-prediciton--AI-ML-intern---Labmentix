@@ -19,7 +19,7 @@ def fraud_det():
                              hover_data=['state', 'year', 'quarter'])
     fig.update_layout(xaxis=dict(title_text='Total Users'), yaxis=dict(title_text='Total Transaction Amount'),width=1400,
                                height=500)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
     st.write("### Suspicious Records Details")
     st.dataframe(anomalies.sort_values('total_tx_amount', ascending=False).head(10).reset_index(drop=True))
         
