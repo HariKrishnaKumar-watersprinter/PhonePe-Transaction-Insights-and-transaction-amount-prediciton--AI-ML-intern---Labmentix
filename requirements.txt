@@ -10,3 +10,4 @@ joblib
 psycopg[binary]
 psycopg2-binary
 sqlalchemy
+datetime
