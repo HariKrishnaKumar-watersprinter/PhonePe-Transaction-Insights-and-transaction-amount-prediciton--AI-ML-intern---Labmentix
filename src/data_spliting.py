@@ -9,12 +9,12 @@ def data_split():
     df=ml_data()
     le=LabelEncoder()
     df['state']=le.fit_transform(df['state'])
-    df=df.drop(columns=['avg_tx_value','avg_app_opens_per_user','insurance_penetration_rate'], axis=1)
+    df=df.drop(columns=['avg_tx_value','avg_app_opens_per_user','insurance_penetration_rate'])
     df1=df.copy()
     pipeline = Pipeline([
         ('scaler', RobustScaler())
     ])
-    scaled_df=pipeline.fit_transform(df1.drop(columns=['future_tx_amount'], axis=1,inplace=False))
+    scaled_df=pipeline.fit_transform(df1.drop(columns=['future_tx_amount'],inplace=False))
     column_names=df.columns.drop('future_tx_amount')
     df=pd.DataFrame(scaled_df,columns=column_names)
     x=df
